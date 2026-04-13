@@ -34,6 +34,8 @@ public class DataInitializer implements CommandLineRunner {
         if (customerRepository.findByUsername("admin") == null) {
             customerRepository.saveAll(List.of(
                     createCustomer("admin", "ADMIN", "Admin", "User"),
+                    createCustomer("a", "ADMIN", "Admin", "Test"),
+                    createCustomer("u", "USER", "User", "Test"),
                     createCustomer("lucas", "USER", "Lucas", "Celik"),
                     createCustomer("sara", "USER", "Sara", "Johansson"),
                     createCustomer("erik", "USER", "Erik", "Lindgren"),
